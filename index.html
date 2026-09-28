@@ -706,7 +706,9 @@ function resetAllFilters(){
   updateTitleDateRange();
 }
 function updateTitleDateRange(){
-  document.getElementById('titleDateRange').textContent = selectedMonth==='ALL' ? 'All months' : (monthLabelOf(selectedMonth) + ' MTD');
+  const label = selectedMonth==='ALL' ? 'All months' : (monthLabelOf(selectedMonth) + ' MTD');
+  document.getElementById('titleDateRange').textContent = label;
+  document.title = 'Supply Status Control Tower — ' + label;
 }
 
 function updateFilterButtons(){
